@@ -19,3 +19,4 @@ s" dumpTool.fs"     included
 s" ukey.fs"         included
 s" uemit.fs"        included
 
+s" tests.fs"        included

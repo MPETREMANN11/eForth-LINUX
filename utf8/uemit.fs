@@ -12,17 +12,20 @@
 \ *********************************************************************
 
 
+
+: 100div ( n -- q r )
+    $100 u/mod swap
+  ;
+
 \ reverse interger bytes, example:
 \  hex 1a2b3C --> 3c2b1a
-: reverse-bytes  ( n0 -- )
-    0 { result }
-    3 for
-        result 100 * to result
-        100 u/mod swap +to result
-    next
-    drop
-    result
+: reverse-bytes  ( n0 -- n1 )
+    $100 u/mod swap $100 * >r
+    $100 u/mod swap r> + $100 * >r
+    $100 u/mod swap r> + $100 * >r
+    r> +
   ;
+
 
 \ emit UTF8 encoded character
 : uemit ( n -- )
