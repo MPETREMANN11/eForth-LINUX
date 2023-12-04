@@ -4,7 +4,6 @@
 \    Date:          02 dec 2023
 \    Updated:       02 dec 2023
 \    File Version:  1.1
-\    MCU:           Linux / Web / Windows
 \    Forth:         eForth Linux
 \    Copyright:     Marc PETREMANN
 \    Author:        Marc PETREMANN
@@ -22,6 +21,9 @@ $001a2b3c reverse-Bytes $3c2b1a00 = assert
 $1a2b3c4d reverse-Bytes $4d3c2b1a = assert
 $ffffffff reverse-bytes $ffffffff = assert
 
+$0080 bytesToUTF8 $c280   = assert
+$0544 bytesToUTF8 $d584   = assert
+$a894 bytesToUTF8 $eaa294 = assert
 
 
 

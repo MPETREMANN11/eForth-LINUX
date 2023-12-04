@@ -4,7 +4,6 @@
 \    Date:          29 nov 2023
 \    Updated:       29 nov 2023
 \    File Version:  1.1
-\    MCU:           Linux / Web / Windows
 \    Forth:         eForth Linux
 \    Copyright:     Marc PETREMANN
 \    Author:        Marc PETREMANN
@@ -40,7 +39,7 @@
 \ https://symbl.cc/fr/unicode/table/#miscellaneous-symbols
 
 \ example:
-\ copy cracatre '♿'
+\ copy character '♿'
 \ ukey 
 \ paste '♿'  and <enter>
 \ push $e299bf  on stack

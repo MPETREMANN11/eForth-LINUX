@@ -1,10 +1,9 @@
 \ *********************************************************************
 \ main file for UT8 characters key and emit
-\    Filename:      ùain.fs
+\    Filename:      main.fs
 \    Date:          29 nov 2023
 \    Updated:       01 dec 2023
 \    File Version:  1.1
-\    MCU:           Linux / Web / Windows
 \    Forth:         eForth Linux
 \    Copyright:     Marc PETREMANN
 \    Author:        Marc PETREMANN
@@ -18,5 +17,8 @@ create --xutf8
 s" dumpTool.fs"     included
 s" ukey.fs"         included
 s" uemit.fs"        included
+s" utf8Set.fs"      included
+s" utf8Tables.fs"   included
 
+\ used only for unit tests
 s" tests.fs"        included

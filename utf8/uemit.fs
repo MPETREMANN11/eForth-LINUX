@@ -4,7 +4,6 @@
 \    Date:          29 nov 2023
 \    Updated:       01 dec 2023
 \    File Version:  1.1
-\    MCU:           Linux / Web / Windows
 \    Forth:         eForth Linux
 \    Copyright:     Marc PETREMANN
 \    Author:        Marc PETREMANN
@@ -12,7 +11,8 @@
 \ *********************************************************************
 
 
-
+\ divide value by $100 and leave q r on stack
+\  example: hex $1234 100div \ leave: 12 34
 : 100div ( n -- q r )
     $100 u/mod swap
   ;
@@ -20,9 +20,9 @@
 \ reverse interger bytes, example:
 \  hex 1a2b3C --> 3c2b1a
 : reverse-bytes  ( n0 -- n1 )
-    $100 u/mod swap $100 * >r
-    $100 u/mod swap r> + $100 * >r
-    $100 u/mod swap r> + $100 * >r
+    100div $100 * >r
+    100div r> + $100 * >r
+    100div r> + $100 * >r
     r> +
   ;
 
